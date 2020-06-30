@@ -15,16 +15,16 @@ public class unit_test {
 	@Test
 	public void test1()
 	{
-		int sum = calculation.sum(2, 5);
-		int expected = 7;
-		System.out.println("@Test sum(): " + sum + " = " + sum);
-		assertEquals(sum, expected);
+//		int sum = calculation.sum(2, 5);
+//		int expected = 7;
+//		System.out.println("@Test sum(): " + sum + " = " + sum);
+//		assertEquals(sum, expected);
 		assertEquals(8, calculation.sum(3, 5));
 	}
 	
 	@Test
 	public void test2()
 	{
-		assertEquals(8, calculation.sum(1 , 5));
+		assertEquals(8, calculation.sum(3 , 4));
 	}
 }

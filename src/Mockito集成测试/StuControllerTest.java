@@ -23,47 +23,29 @@ public class StuControllerTest {
     }
 
     @Test
-    public void testGetStudentInfo() {
+    public void test1() {
         Student returnStudent = new Student();
-        returnStudent.id = 123;
+        returnStudent.id = 1916111;
         returnStudent.name = "mock-user";
-
-        // 调用getStudentFromDB时返回returnStudent对象
         when(mStuDao.getStudentFromDB(anyInt())).thenReturn(returnStudent);
-        // 调用getStudentInfo
-        Student student = mController.getStudentInfo(123);
-        // 验证数据
-        assertEquals(student.id, 123);
+        Student student = mController.getStudentInfo(1916111);
+        assertEquals(student.id, 1916111);
         assertEquals(student.name, "mock-user");
     }
 
     @Test
-    public void testGetStudentInfoFromServer() {
-        // 调用getStudentFromDB时返回null
-        when(mStuDao.getStudentFromDB(anyInt())).thenReturn(null);
-        // 调用getStudentInfo
-        Student student = mController.getStudentInfo(456);
-        // 验证数据
-        assertEquals(student.id, 456);
-        assertEquals(student.name, "server-user");
-    }
-
-    @Test
-    public void testCaptureParam() {
-        // 注意: 创建一个mock对象
+    public void test2() {
         StuController mockController = mock(StuController.class) ;
-
         doAnswer(new Answer<Void>() {
             @Override
             public Void answer(InvocationOnMock invocation) throws Throwable {
                 int studentId = (Integer)invocation.getArguments()[0] ;
-                System.out.println("学生id : " + studentId);
-                assertEquals(666, studentId);
+                System.out.println("学号 : " + studentId);
+                assertEquals(1916120, studentId);
                 return null;
             }
         }).when(mockController).getStudentInfo(anyInt()) ;
-
-        mockController.getStudentInfo(666) ;
+        mockController.getStudentInfo(1916120) ;
     }
 
 	

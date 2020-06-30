@@ -6,6 +6,8 @@
 	<classpathentry kind="lib" path="mockito-core-3.3.3.jar"/>
 	<classpathentry kind="lib" path="byte-buddy-1.10.10.jar"/>
 	<classpathentry kind="lib" path="objenesis-tck-3.1.jar"/>
+	<classpathentry kind="lib" path="Test/junit.jar"/>
 	<classpathentry kind="lib" path="junit.jar"/>
+	<classpathentry kind="lib" path="org.hamcrest.core_1.3.0.v201303031735.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
