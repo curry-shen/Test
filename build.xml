@@ -20,7 +20,8 @@
         <pathelement location="mockito-core-3.3.3.jar"/>
         <pathelement location="byte-buddy-1.10.10.jar"/>
         <pathelement location="objenesis-tck-3.1.jar"/>
-        <pathelement location="junit.jar"/>
+        <pathelement location="org.junit.jar"/>
+        <pathelement location="org.hamcrest.core_1.3.0.v201303031735.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
